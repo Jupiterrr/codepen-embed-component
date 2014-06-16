@@ -5,7 +5,7 @@ Web Component wrapper for codepen's embed widget using Polymer.
 
 <img src="https://cloud.githubusercontent.com/assets/681942/3293124/502b3e4c-f597-11e3-8b2d-b4d2b0c8160d.png" alt="screenshot" width="450" />
 
-### [Demos with Code](http://raw.githack.com/Jupiterrr/codepen-embed/master/demo/demo.html)
+### [Demos with Code](http://raw.githack.com/Jupiterrr/codepen-embed-component/master/demo/demo.html)
 
 
 ## Install
