@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Example</title>
+
+  <script src="../bower_components/platform/platform.js"></script>
+  <link rel="import" href="../src/column-view.html">
+
+</head>
+<body>
+
+  <column-view ondata="source"></column-view>
+
+  <script type="text/javascript">
+    var data = {
+      0: {name: "root", childIDs: [1,2]},
+      1: {name: "Item 1", childIDs: [3,4,5]},
+      2: {name: "Item 2", childIDs: []},
+      3: {name: "Item 3", childIDs: []},
+      4: {name: "Item 4", childIDs: []},
+      5: {name: "Item 5", childIDs: []}
+    };
+
+    function get(id) { return data[id]; }
+
+    function getMany(IDs) { return IDs.map(get); }
+
+
+
+    function source(selectedItem, cb) {
+      if (!selectedItem) selectedItem = data[0];
+      console.log("ID", selectedItem);
+
+      if (selectedItem.childIDs.length) {
+        cb({items: getMany(selectedItem.childIDs)});
+      } else {
+        cb({dom: document.createTextNode("Preview: " + selectedItem.name)})
+      }
+    }
+
+  </script>
+</body>
+</html>

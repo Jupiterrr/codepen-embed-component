@@ -1,0 +1,34 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="codepen-embed" attributes="height themeId penId defaultTab" loading>
+  
+  <template>
+    <style type="text/css">
+      :host([loading]) {
+        opacity: 0;
+      }
+    </style>
+    
+    <iframe id="cp_embed_{{penId}}" src="//codepen.io/anon/embed/{{penId}}?height={{height}}&amp;theme-id={{themeId}}&amp;slug-hash={{penId}}&amp;default-tab={{defaultTab}}" scrolling="no" frameborder="0" height="{{height}}" allowtransparency="true" class="cp_embed_iframe" style="width: 100%; overflow: hidden;" on-load="{{loadHandler}}"></iframe>
+  </template>
+
+  <script type="text/javascript">
+    Polymer('codepen-embed', {
+
+      defaultTab: "result",
+
+      themeId: "",
+      
+      penId: "",
+
+      height: 300,
+
+      // ready: function() {},
+
+      loadHandler: function() {
+        this.removeAttribute("loading");
+      }
+
+    });
+  </script>
+</polymer-element>

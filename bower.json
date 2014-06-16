@@ -1,0 +1,25 @@
+{
+  "name": "codepen-embed",
+  "version": "0.0.1",
+  "authors": [
+    "Carsten Griesheimer hallo@carstengriesheimer.de"
+  ],
+  "description": "Web Component wrapper for codepen's embed widget using Polymer.",
+  "keywords": [
+    "codepen",
+    "polymer",
+    "web-components",
+    "embed"
+  ],
+  "main": "src/column-view.html",
+  "license": "MIT",
+  "homepage": "https://github.com/Jupiterrr/codepen-embed-component",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "demo"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.3.1"
+  }
+}
